@@ -3,7 +3,7 @@
     package="com.example.home">
 
     <dist:module
-        dist:instant="false"
+        dist:instant="true"
         dist:title="@string/title_home">
         <dist:delivery>
             <dist:on-demand />

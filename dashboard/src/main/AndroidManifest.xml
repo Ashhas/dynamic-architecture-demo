@@ -5,7 +5,7 @@
     package="com.example.dashboard">
 
     <dist:module
-        dist:instant="false"
+        dist:instant="true"
         dist:title="@string/title_dashboard">
         <dist:delivery>
             <dist:on-demand />
@@ -13,9 +13,4 @@
 
         <dist:fusing dist:include="true" />
     </dist:module>
-
-    <application tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".dashboardActivity" />
-    </application>
-
 </manifest>

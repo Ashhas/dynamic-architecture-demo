@@ -3,7 +3,7 @@
     package="com.example.notification">
 
     <dist:module
-        dist:instant="false"
+        dist:instant="true"
         dist:title="@string/title_notification">
         <dist:delivery>
             <dist:on-demand />

@@ -25,4 +25,7 @@ dependencies {
     implementation "org.koin:koin-android:2.0.1"
     //Koin for Architecture Components
     implementation "org.koin:koin-android-viewmodel:2.0.1"
+
+    // Instant App
+    implementation "com.google.android.gms:play-services-instantapps:17.0.0"
 }
