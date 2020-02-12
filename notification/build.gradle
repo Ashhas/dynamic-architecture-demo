@@ -20,4 +20,9 @@ android {
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation project(':app')
+
+    //Koin
+    implementation "org.koin:koin-android:2.0.1"
+    //Koin for Architecture Components
+    implementation "org.koin:koin-android-viewmodel:2.0.1"
 }
