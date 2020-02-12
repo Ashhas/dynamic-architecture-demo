@@ -11,12 +11,13 @@ import com.example.dashboard.R
 import org.koin.android.viewmodel.ext.android.viewModel
 import org.koin.core.context.loadKoinModules
 
-private val loadModules by lazy { loadKoinModules(viewModelModule)}
+private val loadModules by lazy {loadKoinModules(viewModelModule)}
 private fun injectFeatures() = loadModules
 
 class DashboardFragment : Fragment(){
 
     private val dashboardViewModel by viewModel<DashboardViewModel>()
+
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -33,7 +34,6 @@ class DashboardFragment : Fragment(){
         dashboardViewModel.text.observe(viewLifecycleOwner, Observer {
             textView.text = it
         })
-
         return root
     }
 }

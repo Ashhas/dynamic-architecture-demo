@@ -11,7 +11,7 @@ import com.example.home.R
 import org.koin.android.viewmodel.ext.android.viewModel
 import org.koin.core.context.loadKoinModules
 
-private val loadModules by lazy { loadKoinModules(viewModelModule) }
+private val loadModules by lazy {loadKoinModules(viewModelModule)}
 private fun injectFeatures() = loadModules
 
 class HomeFragment : Fragment() {
