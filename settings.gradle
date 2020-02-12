@@ -1,0 +1,2 @@
+include ':app', ':dashboard', ':notification', ':home'
+rootProject.name='basicArchitecture'
