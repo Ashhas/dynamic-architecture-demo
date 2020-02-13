@@ -1,6 +1,8 @@
 package com.example.basicarchitecture
 
+import android.net.Uri
 import android.os.Bundle
+import android.util.Log
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.findNavController
@@ -29,5 +31,11 @@ class MainActivity : AppCompatActivity() {
         //Launch Koin Container
         startKoin { androidContext(applicationContext) }
 
+        val action: String? = intent?.action
+        val data: Uri? = intent?.data
+        if(action != null){
+            Log.d("test", action)
+            Log.d("test data", data.toString())
+        }
     }
 }

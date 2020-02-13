@@ -1,2 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources></resources>
+<resources>
+    <string name="in_instant_experience">In Instant Experience?</string>
+    <string name="instant_detect_true">This is an Instant app!</string>
+    <string name="instant_detect_false">You are currently not in an Instant app</string>
+</resources>

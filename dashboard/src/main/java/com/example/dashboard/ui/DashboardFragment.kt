@@ -8,6 +8,7 @@ import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import com.example.dashboard.R
+import com.google.android.gms.common.wrappers.InstantApps.isInstantApp
 import org.koin.android.viewmodel.ext.android.viewModel
 import org.koin.core.context.loadKoinModules
 
@@ -34,6 +35,15 @@ class DashboardFragment : Fragment(){
         dashboardViewModel.text.observe(viewLifecycleOwner, Observer {
             textView.text = it
         })
+
+        //Check if instant app or not
+        val instantExpText: TextView = root.findViewById(R.id.text_instantExperience)
+        if (isInstantApp(context)){
+            instantExpText.text = getString(R.string.instant_detect_true)
+        } else {
+            instantExpText.text = getString(R.string.instant_detect_false)
+        }
+
         return root
     }
 }
