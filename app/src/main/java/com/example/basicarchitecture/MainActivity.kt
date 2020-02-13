@@ -31,11 +31,18 @@ class MainActivity : AppCompatActivity() {
         //Launch Koin Container
         startKoin { androidContext(applicationContext) }
 
-        val action: String? = intent?.action
         val data: Uri? = intent?.data
-        if(action != null){
-            Log.d("test", action)
-            Log.d("test data", data.toString())
+        when {
+            "/home" in data.toString() -> {
+//                supportFragmentManager.beginTransaction().replace(R.id.content, HomeFragment).commit();
+                Log.d("Hello", "Home URL")
+            }
+            "/dashboard" in data.toString() -> {
+                Log.d("Hello", "Dashboard URL")
+            }
+            "/notifications" in data.toString() -> {
+                Log.d("Hello", "Notifications URL")
+            }
         }
     }
 }
