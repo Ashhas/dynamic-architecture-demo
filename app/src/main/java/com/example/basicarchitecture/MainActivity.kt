@@ -9,8 +9,6 @@ import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
-import org.koin.android.ext.koin.androidContext
-import org.koin.core.context.startKoin
 
 class MainActivity : AppCompatActivity() {
 
@@ -28,20 +26,16 @@ class MainActivity : AppCompatActivity() {
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
 
-        //Launch Koin Container
-        startKoin { androidContext(applicationContext) }
-
         val data: Uri? = intent?.data
         when {
             "/home" in data.toString() -> {
-//                supportFragmentManager.beginTransaction().replace(R.id.content, HomeFragment).commit();
-                Log.d("Hello", "Home URL")
+                Log.d("Link", "Home URL")
             }
             "/dashboard" in data.toString() -> {
-                Log.d("Hello", "Dashboard URL")
+                Log.d("Link", "Dashboard URL")
             }
             "/notifications" in data.toString() -> {
-                Log.d("Hello", "Notifications URL")
+                Log.d("Link", "Notifications URL")
             }
         }
     }
