@@ -10,5 +10,27 @@
         </dist:delivery>
         <dist:fusing dist:include="true" />
     </dist:module>
+
+    <application>
+        <activity android:name=".HomeActivity">
+            <intent-filter>
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+            <!-- Filter for Home URL -->
+            <intent-filter android:autoVerify="true">
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <!-- URL that this filter should respond to -->
+                <data
+                    android:host="plat4mation-259eb.firebaseapp.com"
+                    android:pathPrefix="/home"
+                    android:scheme="https" />
+                <data android:scheme="http" />
+            </intent-filter>
+        </activity>
+    </application>
 </manifest>
 

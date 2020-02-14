@@ -1,8 +1,6 @@
 package com.example.basicarchitecture
 
-import android.net.Uri
 import android.os.Bundle
-import android.util.Log
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.findNavController
@@ -25,18 +23,5 @@ class MainActivity : AppCompatActivity() {
         )
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
-
-        val data: Uri? = intent?.data
-        when {
-            "/home" in data.toString() -> {
-                Log.d("Link", "Home URL")
-            }
-            "/dashboard" in data.toString() -> {
-                Log.d("Link", "Dashboard URL")
-            }
-            "/notifications" in data.toString() -> {
-                Log.d("Link", "Notifications URL")
-            }
-        }
     }
 }
